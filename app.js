@@ -8,6 +8,8 @@ app.use(morgan('dev'))
 
 const productRoute = require('./api/routes/products')
 const orderRoute = require('./api/routes/orders')
+const userRoute = require('./api/routes/users')
+
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
@@ -39,6 +41,7 @@ app.use((req,res, next) => {
 
 app.use('/products', productRoute)
 app.use('/orders', orderRoute)
+app.use('/users', userRoute)
 
 app.use((req, res, next) => {
     const error = new Error('not found')

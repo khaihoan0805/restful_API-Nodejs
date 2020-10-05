@@ -1,5 +1,6 @@
 {
     "env": {
-        "MONGO_DB": "nodejs_API"
+        "MONGO_DB": "nodejs_API",
+        "JWT_KEY": "secret"
     }
 }
